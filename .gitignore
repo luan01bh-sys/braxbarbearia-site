@@ -1,0 +1,14 @@
+# Sistema operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Netlify (build local, se algum dia usar)
+.netlify/
