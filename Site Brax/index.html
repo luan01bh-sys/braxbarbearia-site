@@ -105,9 +105,29 @@
         </a>
         <a class="btn-nav" href="https://chat.inbarberapp.com/Braxbarbearia" target="_blank" rel="noopener">Agendar</a>
       </div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </div>
 </header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <nav class="mobile-nav-inner" aria-label="Menu">
+    <p class="eyebrow">Navegação</p>
+    <a href="#servicos">Serviços</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#depoimentos">Avaliações</a>
+    <a href="#localizacao">Localização</a>
+    <a href="#horarios">Horários</a>
+    <a href="#faq">FAQ</a>
+    <div class="mobile-nav-actions">
+      <a class="btn btn-primary" href="https://chat.inbarberapp.com/Braxbarbearia" target="_blank" rel="noopener">Agendar horário</a>
+      <a class="btn btn-ghost" href="https://instagram.com/braxbarbearia" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </nav>
+</div>
 
 <main id="top">
 
@@ -585,6 +605,31 @@
   window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
   });
+
+  // mobile nav (hamburger)
+  (function () {
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileNav');
+    if (!toggle || !menu) return;
+    function setOpen(open) {
+      document.body.classList.toggle('menu-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
+    toggle.addEventListener('click', function () {
+      setOpen(!document.body.classList.contains('menu-open'));
+    });
+    menu.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function () { setOpen(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setOpen(false);
+    });
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 760) setOpen(false);
+    });
+  })();
 
   // reveal on scroll
   const revealEls = document.querySelectorAll('.reveal');
