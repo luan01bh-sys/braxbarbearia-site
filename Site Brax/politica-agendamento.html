@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Agendamento — Brax Barbearia</title>
+<meta name="description" content="Como funcionam os agendamentos na Brax Barbearia: cancelamento, remarcação, tolerância de atraso e faltas.">
+<link rel="canonical" href="https://braxbarbearia.com.br/politica-agendamento.html">
+<meta name="robots" content="noindex, follow">
+
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+<style>@media (max-width:760px){ nav .nav-actions{ display:flex } nav .nav-actions .icon-btn{ display:none } }</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap">
+    <nav>
+      <a href="index.html#top" class="brand-mark">
+        <img src="assets/logo.png" alt="Brax Barbearia">
+        <span>BRAX</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#galeria">Galeria</a>
+        <a href="index.html#depoimentos">Avaliações</a>
+        <a href="index.html#localizacao">Localização</a>
+      </div>
+      <div class="nav-actions">
+        <a href="https://instagram.com/braxbarbearia" target="_blank" rel="noopener" aria-label="Instagram" class="icon-btn">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+        <a class="btn-nav" href="https://chat.inbarberapp.com/Braxbarbearia" target="_blank" rel="noopener">Agendar</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="policy-hero">
+    <div class="wrap">
+      <h1>Política de Agendamento</h1>
+      <p>Última atualização: setembro de 2026</p>
+    </div>
+  </section>
+
+  <div class="policy-content">
+    <a href="index.html" class="back-link">← Voltar para o site</a>
+
+    <p>O respeito ao horário é o que mantém a agenda fluindo para todo mundo. Abaixo, como funcionam os agendamentos na <strong>Brax Barbearia</strong>.</p>
+
+    <h2>1. Agendamento sem custo</h2>
+    <p>Não cobramos sinal nem pagamento antecipado para reservar um horário. Você paga apenas pelo serviço, no dia do atendimento.</p>
+
+    <h2>2. Cancelamento e remarcação</h2>
+    <p>Se precisar cancelar ou remarcar, avise pelo WhatsApp com no mínimo <strong>30 minutos de antecedência</strong>. Assim conseguimos liberar o horário para outro cliente a tempo.</p>
+
+    <h2>3. Tolerância de atraso</h2>
+    <p>A tolerância de atraso é de <strong>10 minutos</strong>. Passado esse tempo, o horário pode ser passado para o próximo cliente e o seu atendimento fica sujeito à disponibilidade do dia.</p>
+
+    <h2>4. Faltas sem aviso</h2>
+    <p>Faltar sem avisar prejudica quem estava aguardando um horário. Faltas repetidas podem fazer com que, nos próximos agendamentos, a gente peça uma confirmação prévia ou um sinal.</p>
+
+    <h2>5. Assinantes</h2>
+    <p>Os horários de quem tem plano de assinatura seguem as mesmas regras acima.</p>
+
+    <h2>Dúvidas?</h2>
+    <p>Fale com a gente pelo WhatsApp: <a href="https://wa.me/5531992916354" target="_blank" rel="noopener">(31) 99291-6354</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Brax Barbearia">
+    <div class="foot-links">
+      <a href="https://chat.inbarberapp.com/Braxbarbearia" target="_blank" rel="noopener">Agendar horário</a>
+      <a href="https://wa.me/5531992916354" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://instagram.com/braxbarbearia" target="_blank" rel="noopener">Instagram</a>
+      <a href="politica-agendamento.html">Agendamento</a>
+      <a href="privacidade.html">Privacidade</a>
+    </div>
+    <div class="copy">© <span id="year"></span> BRAX BARBEARIA — R. CLÉLIA, 151, RIO BRANCO, BELO HORIZONTE - MG</div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a class="btn btn-ghost" href="https://wa.me/5531992916354?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Brax%20Barbearia." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn-primary" href="https://chat.inbarberapp.com/Braxbarbearia" target="_blank" rel="noopener">Agendar</a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+</script>
+
+</body>
+</html>
