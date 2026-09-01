@@ -319,6 +319,23 @@
     font-size:20px; letter-spacing:0.03em;
   }
 
+  /* POR QUE A BRAX — pilares */
+  .pillars{
+    display:grid; grid-template-columns:1fr 1fr; gap:16px;
+    max-width:840px; margin:0 auto;
+  }
+  .pillar{
+    background:var(--surface); border:1px solid var(--line);
+    border-radius:var(--radius); padding:24px 24px 26px;
+  }
+  .pillar-label{
+    display:block; font-size:12px; font-weight:700;
+    letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:11px;
+  }
+  .pillar p{ color:var(--muted); font-size:15px; line-height:1.75; }
+  @media (max-width:760px){ .pillars{ grid-template-columns:1fr; } }
+
   /* PRODUCTS */
   .product-category{ margin-bottom:56px; }
   .product-category:last-child{ margin-bottom:0; }
