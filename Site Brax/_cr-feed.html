@@ -17,6 +17,7 @@
   body{ display:flex; flex-direction:column; align-items:flex-start; }
   /* hide any host-injected badge (e.g. Netlify) from screenshots */
   #netlify-badge, .netlify-badge, [id*="netlify" i], [class*="netlify" i],
+  #nl-badge-frame, iframe[title="Powered by Netlify"],
   ins, .badge-powered, a[href*="netlify.com"]{ display:none !important; }
 
   .frame{
@@ -123,25 +124,25 @@
   h1{
     font-family:'Cormorant SC', Georgia, serif;
     font-weight:600;
-    font-size:66px;
+    font-size:62px;
     line-height:1.0;
     letter-spacing:0.01em;
     color:var(--ivory);
     text-wrap:balance;
-    margin-bottom:14px;
+    margin-bottom:8px;
   }
 
   .pricewrap{
     display:flex; flex-direction:column; align-items:center;
-    margin:2px 0 34px;
+    margin:0 0 34px;
   }
   .was{
     font-family:'Space Mono', monospace;
-    font-size:22px; letter-spacing:0.18em; text-indent:0.18em;
-    color:var(--muted);
-    margin-bottom:2px;
+    font-size:23px; letter-spacing:0.16em; text-indent:0.16em;
+    color:#c8bd9b;
+    margin-bottom:6px;
   }
-  .was s{ text-decoration-color:var(--gold); text-decoration-thickness:2px; }
+  .was s{ text-decoration-color:var(--gold-bright); text-decoration-thickness:2px; }
   .price{
     display:flex; align-items:baseline; justify-content:center;
     gap:12px;
@@ -150,17 +151,17 @@
     font-weight:700;
     text-shadow:0 10px 46px rgba(201,162,75,0.32);
   }
-  .price .cur{ font-size:92px; line-height:1; }
-  .price .num{ font-size:196px; line-height:0.9; font-variant-numeric:tabular-nums; }
+  .price .cur{ font-size:88px; line-height:1; position:relative; top:-8px; }
+  .price .num{ font-size:190px; line-height:0.9; font-variant-numeric:tabular-nums; }
   .price-underline{
-    width:320px; height:2px; margin-top:12px;
+    width:300px; height:2px; margin-top:10px;
     background:linear-gradient(90deg, transparent, var(--gold), transparent);
   }
   .tag{
-    margin-top:16px;
+    margin-top:22px;
     font-family:'Space Mono', monospace;
-    font-size:19px; letter-spacing:0.10em;
-    color:var(--muted);
+    font-size:19px; letter-spacing:0.09em;
+    color:#aaa495;
   }
 
   .sub-copy{
