@@ -50,8 +50,8 @@
     z-index:1;
   }
   .scrim-bot{
-    position:absolute; left:0; right:0; bottom:0; height:74%;
-    background:linear-gradient(0deg, var(--ink) 30%, rgba(8,8,10,0.86) 48%, rgba(8,8,10,0.35) 72%, rgba(8,8,10,0) 100%);
+    position:absolute; left:0; right:0; bottom:0; height:80%;
+    background:linear-gradient(0deg, var(--ink) 36%, rgba(8,8,10,0.93) 52%, rgba(8,8,10,0.5) 74%, rgba(8,8,10,0) 100%);
     z-index:1;
   }
   .glow{
@@ -102,12 +102,12 @@
   /* ---- content ---- */
   .content{
     position:absolute; left:0; right:0; bottom:0;
-    padding:0 96px 104px;
+    padding:0 96px 122px;
     z-index:4;
     display:flex; flex-direction:column; align-items:center;
     text-align:center;
   }
-  .frame.story .content{ padding-bottom:150px; }
+  .frame.story .content{ padding-bottom:170px; }
 
   .eyebrow{
     display:flex; align-items:center; gap:20px;
@@ -129,7 +129,7 @@
     letter-spacing:0.01em;
     color:var(--ivory);
     text-wrap:balance;
-    margin-bottom:8px;
+    margin-bottom:22px;
   }
 
   .pricewrap{
@@ -138,21 +138,25 @@
   }
   .was{
     font-family:'Space Mono', monospace;
-    font-size:23px; letter-spacing:0.16em; text-indent:0.16em;
-    color:#c8bd9b;
-    margin-bottom:6px;
+    font-size:25px; letter-spacing:0.20em; text-indent:0.20em;
+    color:#e6dcc2;
+    margin-bottom:8px;
   }
   .was s{ text-decoration-color:var(--gold-bright); text-decoration-thickness:2px; }
   .price{
     display:flex; align-items:baseline; justify-content:center;
-    gap:12px;
+    gap:14px;
     color:var(--gold-bright);
     font-family:'Cormorant SC', Georgia, serif;
     font-weight:700;
     text-shadow:0 10px 46px rgba(201,162,75,0.32);
   }
-  .price .cur{ font-size:88px; line-height:1; position:relative; top:-8px; }
-  .price .num{ font-size:190px; line-height:0.9; font-variant-numeric:tabular-nums; }
+  .price .cur{ font-size:84px; line-height:1; }
+  .price .num{
+    font-size:184px; line-height:0.9;
+    font-feature-settings:"lnum" 1, "tnum" 1;
+    font-variant-numeric:lining-nums tabular-nums;
+  }
   .price-underline{
     width:300px; height:2px; margin-top:10px;
     background:linear-gradient(90deg, transparent, var(--gold), transparent);
