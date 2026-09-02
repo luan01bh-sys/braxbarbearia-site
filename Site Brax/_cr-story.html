@@ -15,6 +15,9 @@
   *{ margin:0; padding:0; box-sizing:border-box; }
   html,body{ background:#151515; }
   body{ display:flex; flex-direction:column; align-items:flex-start; }
+  /* hide any host-injected badge (e.g. Netlify) from screenshots */
+  #netlify-badge, .netlify-badge, [id*="netlify" i], [class*="netlify" i],
+  ins, .badge-powered, a[href*="netlify.com"]{ display:none !important; }
 
   .frame{
     position:relative;
@@ -120,57 +123,53 @@
   h1{
     font-family:'Cormorant SC', Georgia, serif;
     font-weight:600;
-    font-size:76px;
+    font-size:66px;
     line-height:1.0;
+    letter-spacing:0.01em;
     color:var(--ivory);
     text-wrap:balance;
-    margin-bottom:6px;
+    margin-bottom:14px;
   }
 
-  .price{
-    position:relative;
-    display:flex; align-items:flex-start; justify-content:center;
-    gap:14px;
-    margin:6px 0 6px;
-  }
-  .price .cur{
-    font-family:'Cormorant SC', Georgia, serif;
-    font-weight:700;
-    font-size:78px;
-    color:var(--gold-bright);
-    margin-top:34px;
-  }
-  .price .num{
-    font-family:'Cormorant SC', Georgia, serif;
-    font-weight:700;
-    font-size:236px;
-    line-height:0.8;
-    color:var(--gold-bright);
-    font-variant-numeric:tabular-nums;
-    text-shadow:0 8px 40px rgba(201,162,75,0.35);
+  .pricewrap{
+    display:flex; flex-direction:column; align-items:center;
+    margin:2px 0 34px;
   }
   .was{
     font-family:'Space Mono', monospace;
-    font-size:24px; letter-spacing:0.06em;
+    font-size:22px; letter-spacing:0.18em; text-indent:0.18em;
     color:var(--muted);
-    margin-bottom:20px;
+    margin-bottom:2px;
   }
   .was s{ text-decoration-color:var(--gold); text-decoration-thickness:2px; }
-
-  .rule-star{
-    display:flex; align-items:center; gap:18px;
-    color:var(--gold); margin-bottom:24px;
+  .price{
+    display:flex; align-items:baseline; justify-content:center;
+    gap:12px;
+    color:var(--gold-bright);
+    font-family:'Cormorant SC', Georgia, serif;
+    font-weight:700;
+    text-shadow:0 10px 46px rgba(201,162,75,0.32);
   }
-  .rule-star i{ display:block; width:90px; height:1px; background:var(--gold); opacity:.5; }
-  .rule-star svg{ width:20px; height:20px; }
+  .price .cur{ font-size:92px; line-height:1; }
+  .price .num{ font-size:196px; line-height:0.9; font-variant-numeric:tabular-nums; }
+  .price-underline{
+    width:320px; height:2px; margin-top:12px;
+    background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .tag{
+    margin-top:16px;
+    font-family:'Space Mono', monospace;
+    font-size:19px; letter-spacing:0.10em;
+    color:var(--muted);
+  }
 
   .sub-copy{
     font-family:'Manrope', sans-serif;
     font-weight:500;
-    font-size:29px;
+    font-size:28px;
     line-height:1.45;
     color:#d9d4c8;
-    max-width:22ch;
+    max-width:24ch;
     margin-bottom:40px;
   }
 
@@ -224,16 +223,11 @@
   <div class="content">
     <div class="eyebrow">Só para o seu primeiro corte</div>
     <h1>Primeiro corte</h1>
-    <div class="price">
-      <span class="cur">R$</span>
-      <span class="num">30</span>
-    </div>
-    <div class="was"><s>de R$ 40</s> &nbsp;·&nbsp; para quem ainda não é cliente</div>
-
-    <div class="rule-star">
-      <i></i>
-      <svg viewBox="0 0 18 18" fill="none"><path d="M9 0L11 7L18 9L11 11L9 18L7 11L0 9L7 7L9 0Z" fill="currentColor"/></svg>
-      <i></i>
+    <div class="pricewrap">
+      <div class="was"><s>de R$ 40</s></div>
+      <div class="price"><span class="cur">R$</span><span class="num">30</span></div>
+      <div class="price-underline"></div>
+      <div class="tag">para quem ainda não é cliente da Brax</div>
     </div>
 
     <p class="sub-copy">Conheça a Brax pagando menos no primeiro corte.</p>
