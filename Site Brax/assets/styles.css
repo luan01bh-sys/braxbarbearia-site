@@ -267,13 +267,18 @@
 
   /* PROMO BANNER */
   .promo-banner{
+    display:block; text-decoration:none;
     background: linear-gradient(90deg, rgba(201,162,75,0.12), rgba(201,162,75,0.05));
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
-    padding:18px 0;
+    padding:16px 0;
+    transition: background .25s ease;
+  }
+  .promo-banner:hover{
+    background: linear-gradient(90deg, rgba(201,162,75,0.20), rgba(201,162,75,0.09));
   }
   .promo-banner .inner{
-    display:flex; align-items:center; justify-content:center; gap:14px;
+    display:flex; align-items:center; justify-content:center; gap:16px;
     flex-wrap:wrap; text-align:center;
   }
   .promo-banner .badge{
@@ -283,7 +288,17 @@
   }
   .promo-banner p{ font-size:14.5px; color:var(--ivory); }
   .promo-banner strong{ color:var(--gold-bright); }
-  .promo-banner a{ color:var(--gold-bright); text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
+  .promo-banner .promo-cta{
+    display:inline-flex; align-items:center; gap:8px; white-space:nowrap;
+    font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.12em;
+    text-transform:uppercase; font-weight:700;
+    color:var(--gold-bright);
+    border:1px solid var(--gold);
+    padding:8px 16px; border-radius:2px;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+  }
+  .promo-banner .promo-cta svg{ width:13px; height:13px; }
+  .promo-banner:hover .promo-cta{ background:var(--gold); color:#181410; transform:translateX(2px); }
 
   /* GALLERY */
   .gallery-grid{
