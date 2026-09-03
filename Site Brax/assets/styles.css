@@ -514,6 +514,38 @@
     .sub-badge{ left:20px; transform:translateY(-50%); }
   }
 
+  /* NOSSO TIME */
+  .team-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 340px));
+    gap:20px; justify-content:center;
+  }
+  .team-card{
+    border:1px solid var(--line); background:var(--surface);
+    display:flex; flex-direction:column; overflow:hidden;
+  }
+  .team-photo{ position:relative; aspect-ratio:3 / 4; overflow:hidden; background:var(--surface-2); }
+  .team-photo img{
+    width:100%; height:100%; object-fit:cover; object-position:50% 13%;
+    filter:grayscale(0.35) contrast(1.12) brightness(0.84);
+    transition:filter .5s ease, transform .6s ease;
+  }
+  /* funde o fundo cinza da foto no card escuro */
+  .team-photo::after{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(to top, var(--surface) 1%, rgba(20,19,20,0.55) 22%, transparent 55%);
+  }
+  .team-card:hover .team-photo img{ filter:grayscale(0.05) contrast(1.06) brightness(0.98); transform:scale(1.04); }
+  .team-info{ padding:22px 22px 26px; display:flex; flex-direction:column; gap:9px; }
+  .team-role{ font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
+  .team-info h3{ font-family:'Cormorant SC', serif; font-weight:600; font-size:24px; line-height:1.1; color:var(--ivory); }
+  .team-info p{ color:var(--muted); font-size:13px; line-height:1.7; }
+  .team-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:5px; }
+  .team-tags span{
+    font-family:'Space Mono', monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--gold-bright); border:1px solid var(--line); border-radius:999px; padding:5px 11px;
+  }
+  @media (max-width:520px){ .team-grid{ grid-template-columns:1fr; } }
+
   /* LOCATION */
   .loc-layout{ display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); }
   .loc-info{ padding:48px; background:var(--surface); display:flex; flex-direction:column; justify-content:center; gap:26px; }
