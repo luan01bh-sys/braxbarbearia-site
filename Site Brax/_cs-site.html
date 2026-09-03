@@ -10,11 +10,11 @@
   }
   *{ margin:0; padding:0; box-sizing:border-box; }
   html,body{ background:#151515; }
-  body{ display:flex; }
+  body{ display:block; }
   #netlify-badge,#nl-badge-frame,iframe[title="Powered by Netlify"],ins,a[href*="netlify.com"]{ display:none !important; }
 
   .frame{
-    position:relative; width:1080px; height:1920px; overflow:hidden;
+    position:relative; width:1080px; min-width:1080px; height:1920px; overflow:hidden; flex-shrink:0;
     background:
       radial-gradient(72% 42% at 50% 30%, rgba(201,162,75,0.17), transparent 62%),
       radial-gradient(90% 45% at 50% 100%, rgba(201,162,75,0.10), transparent 60%),
