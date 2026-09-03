@@ -523,18 +523,24 @@
     border:1px solid var(--line); background:var(--surface);
     display:flex; flex-direction:column; overflow:hidden;
   }
-  .team-photo{ position:relative; aspect-ratio:3 / 4; overflow:hidden; background:var(--surface-2); }
-  .team-photo img{
-    width:100%; height:100%; object-fit:cover; object-position:50% 13%;
-    filter:grayscale(0.35) contrast(1.12) brightness(0.84);
-    transition:filter .5s ease, transform .6s ease;
+  /* fotos são recortes PNG (fundo transparente) sobre o card escuro */
+  .team-photo{
+    position:relative; aspect-ratio:3 / 4; overflow:hidden;
+    background:
+      radial-gradient(135% 95% at 50% 22%, rgba(201,162,75,0.12), rgba(243,239,228,0.04) 34%, transparent 64%),
+      linear-gradient(180deg, var(--surface-2), #17161c);
   }
-  /* funde o fundo cinza da foto no card escuro */
+  .team-photo img{
+    width:100%; height:100%; object-fit:cover; object-position:50% 6%;
+    filter:contrast(1.04) drop-shadow(0 14px 26px rgba(0,0,0,0.55));
+    transition:transform .6s ease, filter .5s ease;
+  }
+  /* funde a base do recorte no painel de texto */
   .team-photo::after{
     content:""; position:absolute; inset:0; pointer-events:none;
-    background:linear-gradient(to top, var(--surface) 1%, rgba(20,19,20,0.55) 22%, transparent 55%);
+    background:linear-gradient(to top, var(--surface) 1%, rgba(23,22,28,0.5) 16%, transparent 42%);
   }
-  .team-card:hover .team-photo img{ filter:grayscale(0.05) contrast(1.06) brightness(0.98); transform:scale(1.04); }
+  .team-card:hover .team-photo img{ transform:scale(1.035); filter:contrast(1.05) drop-shadow(0 16px 30px rgba(0,0,0,0.6)); }
   .team-info{ padding:22px 22px 26px; display:flex; flex-direction:column; gap:9px; }
   .team-role{ font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
   .team-info h3{ font-family:'Cormorant SC', serif; font-weight:600; font-size:24px; line-height:1.1; color:var(--ivory); }
