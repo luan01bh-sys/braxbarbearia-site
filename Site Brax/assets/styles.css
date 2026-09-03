@@ -101,21 +101,25 @@
   }
   .btn-nav:hover{background:var(--gold); color:var(--bg) !important;}
 
-  /* telas médias: aperta o menu em vez de esconder itens */
-  @media (max-width:1280px){
-    nav{ gap:16px; }
-    nav .nav-links{ gap:11px; font-size:11px; letter-spacing:0.02em; }
+  /* telas médias: aperta o menu em vez de esconder itens (10 itens) */
+  @media (max-width:1320px){
+    nav{ gap:14px; }
+    nav .nav-links{ gap:10px; font-size:11px; letter-spacing:0.02em; }
     .brand-mark span{ font-size:17px; }
-    .nav-actions{ gap:10px; }
-    .btn-nav{ padding:8px 12px; font-size:10.5px; }
+    .nav-actions{ gap:9px; }
+    .btn-nav{ padding:8px 11px; font-size:10.5px; }
     nav .nav-actions .icon-btn{ display:none; }  /* atalho do Instagram — já está no rodapé e no menu mobile */
   }
-  @media (max-width:1040px){
+  @media (max-width:1120px){
     #siteHeader .wrap{ padding:0 14px; }
     nav{ gap:10px; }
-    nav .nav-links{ gap:8px; font-size:10.5px; letter-spacing:0; }
-    .brand-mark span{ display:none; }  /* mantém só o brasão; o texto BRAX volta acima de 1040px */
+    nav .nav-links{ gap:7px; font-size:10.5px; letter-spacing:0; }
+    .brand-mark span{ display:none; }  /* mantém só o brasão; o texto BRAX volta acima de 1120px */
     .btn-nav{ padding:7px 10px; font-size:10px; }
+  }
+  @media (max-width:940px){
+    nav .nav-links{ gap:6px; font-size:9.75px; }
+    .brand-mark img{ height:30px; }
   }
 
   /* Mobile nav toggle (hamburger) */
