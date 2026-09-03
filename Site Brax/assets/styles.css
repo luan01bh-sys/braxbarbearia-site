@@ -102,18 +102,19 @@
   .btn-nav:hover{background:var(--gold); color:var(--bg) !important;}
 
   /* medium screens: tighten the menu instead of dropping items */
-  @media (max-width:1080px){
-    nav{ gap:20px; }
-    nav .nav-links{ gap:13px; font-size:11.5px; letter-spacing:0.02em; }
+  @media (max-width:1100px){
+    nav{ gap:18px; }
+    nav .nav-links{ gap:12px; font-size:11.5px; letter-spacing:0.02em; }
     .brand-mark span{ font-size:17px; }
     .nav-actions{ gap:10px; }
     .btn-nav{ padding:8px 12px; font-size:10.5px; }
+    nav .nav-actions .icon-btn{ display:none; }  /* atalho do Instagram — já está no rodapé e no menu mobile */
   }
-  @media (max-width:880px){
+  @media (max-width:960px){
     #siteHeader .wrap{ padding:0 14px; }
     nav{ gap:12px; }
-    nav .nav-links{ gap:9px; font-size:10.5px; letter-spacing:0; }
-    nav .nav-actions .icon-btn{ display:none; }  /* atalho do Instagram (tem no rodapé e no menu mobile) */
+    nav .nav-links{ gap:8px; font-size:10.5px; letter-spacing:0; }
+    .brand-mark span{ display:none; }  /* mantém só o brasão; o texto BRAX volta acima de 960px */
   }
 
   /* Mobile nav toggle (hamburger) */
