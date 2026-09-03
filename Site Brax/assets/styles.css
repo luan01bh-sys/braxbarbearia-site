@@ -203,7 +203,7 @@
   @media (max-width:760px){
     nav .nav-links{ display:none; }
     nav .nav-actions{ display:none; }
-    .nav-toggle{ display:flex; }
+    .nav-toggle{ display:flex; margin-left:auto; }  /* logo à esquerda, menu à direita */
   }
 
   /* HERO */
