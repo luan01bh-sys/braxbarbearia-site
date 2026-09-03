@@ -1,0 +1,122 @@
+<title>Brax Site Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b; --ink:#08080a;
+    --gold:#c9a24b; --gold-bright:#e6c675; --ivory:#f3efe4;
+    --muted:#a49f93; --line:rgba(201,162,75,0.38);
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ background:#151515; }
+  body{ display:block; }
+  #netlify-badge,#nl-badge-frame,iframe[title="Powered by Netlify"],ins,a[href*="netlify.com"]{ display:none !important; }
+
+  .frame{
+    position:relative; width:1080px; min-width:1080px; height:1920px; overflow:hidden; flex-shrink:0;
+    background:
+      radial-gradient(72% 42% at 50% 30%, rgba(201,162,75,0.17), transparent 62%),
+      radial-gradient(90% 45% at 50% 100%, rgba(201,162,75,0.10), transparent 60%),
+      var(--bg);
+    font-family:'Manrope', -apple-system, sans-serif;
+    color:var(--ivory);
+    display:flex; flex-direction:column; align-items:center;
+    text-align:center;
+    padding:140px 90px 104px;
+  }
+
+  /* engraved border + corner ticks */
+  .border{ position:absolute; inset:44px; border:1px solid var(--line); z-index:2; pointer-events:none; }
+  .border::before,.border::after{ content:""; position:absolute; width:40px; height:40px; border:2px solid var(--gold-bright); }
+  .border::before{ top:-2px; left:-2px; border-right:0; border-bottom:0; }
+  .border::after{ bottom:-2px; right:-2px; border-left:0; border-top:0; }
+
+  .content{ position:relative; z-index:3; display:flex; flex-direction:column; align-items:center; width:100%; }
+
+  .crest-wrap{ position:relative; display:flex; justify-content:center; margin-top:8px; }
+  .crest-wrap .glow{ position:absolute; left:50%; top:50%; width:660px; height:660px; transform:translate(-50%,-50%); background:radial-gradient(circle at center, rgba(201,162,75,0.24), rgba(201,162,75,0) 62%); pointer-events:none; }
+  .crest{ position:relative; width:420px; height:auto; display:block; filter:drop-shadow(0 22px 44px rgba(0,0,0,0.55)); }
+
+  .star{ margin:40px 0 44px; display:flex; align-items:center; gap:20px; color:var(--gold); }
+  .star i{ display:block; width:80px; height:1px; background:linear-gradient(90deg, transparent, var(--gold)); }
+  .star i:last-child{ background:linear-gradient(90deg, var(--gold), transparent); }
+  .star svg{ width:20px; height:20px; }
+
+  .eyebrow{ font-family:'Space Mono', monospace; font-size:20px; letter-spacing:0.34em; text-indent:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:24px; }
+
+  h1{ font-family:'Cormorant SC', serif; font-weight:700; font-size:110px; line-height:1.0; color:var(--ivory); text-wrap:balance; margin-bottom:44px; }
+
+  .url{
+    display:inline-block;
+    font-family:'Space Mono', monospace; font-weight:700;
+    font-size:36px; letter-spacing:0.02em;
+    color:var(--gold-bright);
+    border:1px solid var(--gold);
+    border-radius:3px;
+    padding:22px 38px;
+    margin-bottom:66px;
+  }
+
+  .list{ display:flex; flex-direction:column; gap:30px; margin-bottom:70px; }
+  .list .row{ display:flex; align-items:center; gap:20px; font-size:31px; color:#ddd7c9; }
+  .list .row svg{ flex-shrink:0; width:28px; height:28px; color:var(--gold); }
+
+  .cta{
+    display:inline-flex; align-items:center; gap:16px;
+    background:var(--gold); color:#141007;
+    font-family:'Manrope', sans-serif; font-weight:800;
+    font-size:27px; letter-spacing:0.10em; text-transform:uppercase;
+    padding:28px 56px; border-radius:2px;
+    box-shadow:0 20px 50px -18px rgba(201,162,75,0.6);
+  }
+  .cta svg{ width:28px; height:28px; }
+
+  .spacer{ flex:1 1 40px; }
+  .foot{
+    position:relative; z-index:3;
+    font-family:'Space Mono', monospace; font-size:23px; letter-spacing:0.06em; color:var(--ivory);
+  }
+  .foot .b{ color:var(--gold); }
+  .foot .ig{ display:block; margin-top:12px; color:var(--muted); font-size:21px; }
+</style>
+
+<div class="frame" id="frame">
+  <div class="border"></div>
+  <div class="content">
+    <div class="crest-wrap">
+      <div class="glow"></div>
+      <img class="crest" src="assets/logo.png" alt="Brax Barbearia">
+    </div>
+
+    <div class="star">
+      <i></i>
+      <svg viewBox="0 0 18 18" fill="none"><path d="M9 0L11 7L18 9L11 11L9 18L7 11L0 9L7 7L9 0Z" fill="currentColor"/></svg>
+      <i></i>
+    </div>
+
+    <div class="eyebrow">Agora é online</div>
+    <h1>Nosso site<br>no ar</h1>
+
+    <div class="url">braxbarbearia.com.br</div>
+
+    <div class="list">
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Agende seu horário</div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Serviços, preços e planos de assinatura</div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Reserve produtos pelo WhatsApp</div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Avaliações, localização e horários</div>
+    </div>
+
+    <div class="cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      Acesse agora
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="foot">
+    <span class="b">Rio Branco</span> · Belo Horizonte
+    <span class="ig">@braxbarbearia</span>
+  </div>
+</div>
