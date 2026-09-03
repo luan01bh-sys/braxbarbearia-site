@@ -19,6 +19,7 @@
     font-weight:400;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
+    overflow-x:clip;
   }
   h1,h2,h3{
     font-family:'Cormorant SC', serif;
@@ -525,7 +526,7 @@
   }
   .team-card{ display:flex; flex-direction:column; align-items:center; text-align:center; }
   .team-photo{
-    position:relative; width:100%; line-height:0;
+    position:relative; width:100%; line-height:0; overflow:hidden;
     height:clamp(380px, 40vw, 470px);
   }
   /* halo dourado atrás pra destacar a silhueta (camiseta preta em fundo escuro) */
