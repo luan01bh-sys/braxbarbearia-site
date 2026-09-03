@@ -87,7 +87,13 @@
       { "@type": "Offer", "priceCurrency": "BRL", "price": "85.00", "itemOffered": { "@type": "Service", "name": "Corte, Barba e Sobrancelha" } },
       { "@type": "Offer", "priceCurrency": "BRL", "price": "50.00", "itemOffered": { "@type": "Service", "name": "Corte e Sobrancelha" } },
       { "@type": "Offer", "priceCurrency": "BRL", "price": "15.00", "itemOffered": { "@type": "Service", "name": "Sobrancelha" } },
-      { "@type": "Offer", "priceCurrency": "BRL", "price": "15.00", "itemOffered": { "@type": "Service", "name": "Pezinho" } }
+      { "@type": "Offer", "priceCurrency": "BRL", "price": "15.00", "itemOffered": { "@type": "Service", "name": "Pezinho" } },
+      { "@type": "Offer", "priceCurrency": "BRL", "price": "128.00", "itemOffered": { "@type": "Service", "name": "Assinatura Mensal — Corte (4 cortes por mês)" } },
+      { "@type": "Offer", "priceCurrency": "BRL", "price": "160.00", "itemOffered": { "@type": "Service", "name": "Assinatura Mensal — Corte e Sobrancelha (4 atendimentos por mês)" } },
+      { "@type": "Offer", "priceCurrency": "BRL", "price": "256.00", "itemOffered": { "@type": "Service", "name": "Assinatura Mensal — Corte, Barba e Sobrancelha (4 atendimentos por mês)" } },
+      { "@type": "Offer", "priceCurrency": "BRL", "price": "64.00", "itemOffered": { "@type": "Service", "name": "Assinatura Quinzenal — Corte (2 cortes por mês)" } },
+      { "@type": "Offer", "priceCurrency": "BRL", "price": "80.00", "itemOffered": { "@type": "Service", "name": "Assinatura Quinzenal — Corte e Sobrancelha (2 atendimentos por mês)" } },
+      { "@type": "Offer", "priceCurrency": "BRL", "price": "128.00", "itemOffered": { "@type": "Service", "name": "Assinatura Quinzenal — Corte, Barba e Sobrancelha (2 atendimentos por mês)" } }
     ]
   },
   "sameAs": [
@@ -131,6 +137,7 @@
       </a>
       <div class="nav-links">
         <a href="#servicos">Serviços</a>
+        <a href="#assinaturas">Assinaturas</a>
         <a href="#produtos">Produtos</a>
         <a href="#galeria">Galeria</a>
         <a href="#depoimentos">Avaliações</a>
@@ -156,6 +163,7 @@
   <nav class="mobile-nav-inner" aria-label="Menu">
     <p class="eyebrow">Navegação</p>
     <a href="#servicos">Serviços</a>
+    <a href="#assinaturas">Assinaturas</a>
     <a href="#produtos">Produtos</a>
     <a href="#galeria">Galeria</a>
     <a href="#depoimentos">Avaliações</a>
@@ -299,13 +307,124 @@
 
         <div class="service-group">
           <h3>Assinaturas</h3>
-          <div class="service-row"><span class="name">Mensal · Corte</span><span class="price">R$ 128,00</span></div>
-          <div class="service-row"><span class="name">Mensal · Corte e Sobrancelha</span><span class="price">R$ 160,00</span></div>
-          <div class="service-row"><span class="name">Mensal · Corte, Barba e Sobrancelha</span><span class="price">R$ 256,00</span></div>
-          <div class="service-row"><span class="name">Quinzenal · Corte</span><span class="price">R$ 64,00</span></div>
-          <div class="service-row"><span class="name">Quinzenal · Corte e Sobrancelha</span><span class="price">R$ 80,00</span></div>
-          <div class="service-row"><span class="name">Quinzenal · Corte, Barba e Sobrancelha</span><span class="price">R$ 128,00</span></div>
+          <p class="svc-sub-note">Planos mensais e quinzenais com preço fixo, para manter o visual sempre em dia. Economia de até 25% em relação ao avulso.</p>
+          <a class="svc-sub-link" href="#assinaturas">Ver planos de assinatura
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="divider">
+      <div class="rule left"></div>
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 0L11 7L18 9L11 11L9 18L7 11L0 9L7 7L9 0Z" fill="#c9a24b"/></svg>
+      <div class="rule"></div>
+    </div>
+  </div>
+
+  <section id="assinaturas">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow" style="justify-content:center;"><span>Assinaturas</span></div>
+        <h2>Plano fixo, visual sempre em dia</h2>
+        <p>Escolha a frequência e o combo. Todo mês você paga menos do que sairia no avulso.</p>
+      </div>
+
+      <div class="sub-toggle reveal" role="tablist" aria-label="Frequência da assinatura">
+        <button type="button" class="sub-tab active" data-mode="mensal" role="tab" aria-selected="true">Mensal</button>
+        <button type="button" class="sub-tab" data-mode="quinzenal" role="tab" aria-selected="false">Quinzenal</button>
+      </div>
+
+      <div class="sub-grid reveal" id="subMensal">
+        <article class="sub-card">
+          <h3 class="sub-name">Corte</h3>
+          <div class="sub-price"><span class="cur">R$</span> 128 <span class="per">/mês</span></div>
+          <p class="sub-count">4 cortes por mês <span>· no avulso, R$ 160</span></p>
+          <p class="sub-save">Economize R$ 32 por mês <span>(20%)</span></p>
+          <ul class="sub-incl">
+            <li>Corte</li>
+            <li>Com o profissional que você escolher</li>
+          </ul>
+          <a class="sub-btn" target="_blank" rel="noopener" href="https://wa.me/5531992916354?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20Mensal%20%C2%B7%20Corte%20%28R%24%20128%2Fm%C3%AAs%29.">Quero assinar</a>
+        </article>
+
+        <article class="sub-card">
+          <h3 class="sub-name">Corte e Sobrancelha</h3>
+          <div class="sub-price"><span class="cur">R$</span> 160 <span class="per">/mês</span></div>
+          <p class="sub-count">4 atendimentos por mês <span>· no avulso, R$ 200</span></p>
+          <p class="sub-save">Economize R$ 40 por mês <span>(20%)</span></p>
+          <ul class="sub-incl">
+            <li>Corte</li>
+            <li>Sobrancelha</li>
+            <li>Com o profissional que você escolher</li>
+          </ul>
+          <a class="sub-btn" target="_blank" rel="noopener" href="https://wa.me/5531992916354?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20Mensal%20%C2%B7%20Corte%20e%20Sobrancelha%20%28R%24%20160%2Fm%C3%AAs%29.">Quero assinar</a>
+        </article>
+
+        <article class="sub-card featured">
+          <span class="sub-badge">Mais escolhido</span>
+          <h3 class="sub-name">Corte, Barba e Sobrancelha</h3>
+          <div class="sub-price"><span class="cur">R$</span> 256 <span class="per">/mês</span></div>
+          <p class="sub-count">4 atendimentos por mês <span>· no avulso, R$ 340</span></p>
+          <p class="sub-save">Economize R$ 84 por mês <span>(25%)</span></p>
+          <ul class="sub-incl">
+            <li>Corte</li>
+            <li>Barba</li>
+            <li>Sobrancelha</li>
+            <li>Com o profissional que você escolher</li>
+          </ul>
+          <a class="sub-btn" target="_blank" rel="noopener" href="https://wa.me/5531992916354?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20Mensal%20%C2%B7%20Corte%2C%20Barba%20e%20Sobrancelha%20%28R%24%20256%2Fm%C3%AAs%29.">Quero assinar</a>
+        </article>
+      </div>
+
+      <div class="sub-grid reveal" id="subQuinzenal" hidden>
+        <article class="sub-card">
+          <h3 class="sub-name">Corte</h3>
+          <div class="sub-price"><span class="cur">R$</span> 64 <span class="per">/mês</span></div>
+          <p class="sub-count">2 cortes por mês <span>· no avulso, R$ 80</span></p>
+          <p class="sub-save">Economize R$ 16 por mês <span>(20%)</span></p>
+          <ul class="sub-incl">
+            <li>Corte</li>
+            <li>Com o profissional que você escolher</li>
+          </ul>
+          <a class="sub-btn" target="_blank" rel="noopener" href="https://wa.me/5531992916354?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20Quinzenal%20%C2%B7%20Corte%20%28R%24%2064%2Fm%C3%AAs%29.">Quero assinar</a>
+        </article>
+
+        <article class="sub-card">
+          <h3 class="sub-name">Corte e Sobrancelha</h3>
+          <div class="sub-price"><span class="cur">R$</span> 80 <span class="per">/mês</span></div>
+          <p class="sub-count">2 atendimentos por mês <span>· no avulso, R$ 100</span></p>
+          <p class="sub-save">Economize R$ 20 por mês <span>(20%)</span></p>
+          <ul class="sub-incl">
+            <li>Corte</li>
+            <li>Sobrancelha</li>
+            <li>Com o profissional que você escolher</li>
+          </ul>
+          <a class="sub-btn" target="_blank" rel="noopener" href="https://wa.me/5531992916354?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20Quinzenal%20%C2%B7%20Corte%20e%20Sobrancelha%20%28R%24%2080%2Fm%C3%AAs%29.">Quero assinar</a>
+        </article>
+
+        <article class="sub-card">
+          <h3 class="sub-name">Corte, Barba e Sobrancelha</h3>
+          <div class="sub-price"><span class="cur">R$</span> 128 <span class="per">/mês</span></div>
+          <p class="sub-count">2 atendimentos por mês <span>· no avulso, R$ 170</span></p>
+          <p class="sub-save">Economize R$ 42 por mês <span>(25%)</span></p>
+          <ul class="sub-incl">
+            <li>Corte</li>
+            <li>Barba</li>
+            <li>Sobrancelha</li>
+            <li>Com o profissional que você escolher</li>
+          </ul>
+          <a class="sub-btn" target="_blank" rel="noopener" href="https://wa.me/5531992916354?text=Ol%C3%A1%21%20Quero%20assinar%20o%20plano%20Quinzenal%20%C2%B7%20Corte%2C%20Barba%20e%20Sobrancelha%20%28R%24%20128%2Fm%C3%AAs%29.">Quero assinar</a>
+        </article>
+      </div>
+
+      <div class="sub-rules reveal">
+        <p>Os atendimentos valem dentro do mês e não acumulam para o mês seguinte.</p>
+        <p>Agendamento pelo site ou WhatsApp, como de costume.</p>
+        <p>Escolha o profissional que preferir: Luan, Alexandre ou Pedro.</p>
+        <p>Sem fidelidade. Cancele quando quiser, avisando pelo WhatsApp antes da próxima renovação.</p>
       </div>
     </div>
   </section>
@@ -731,6 +850,26 @@
     });
     window.addEventListener('resize', function () {
       if (window.innerWidth > 760) setOpen(false);
+    });
+  })();
+
+  // assinaturas: toggle Mensal / Quinzenal
+  (function () {
+    const tabs = document.querySelectorAll('.sub-tab');
+    const grids = { mensal: document.getElementById('subMensal'), quinzenal: document.getElementById('subQuinzenal') };
+    if (!tabs.length || !grids.mensal || !grids.quinzenal) return;
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        const mode = t.dataset.mode;
+        tabs.forEach(function (x) {
+          const on = x === t;
+          x.classList.toggle('active', on);
+          x.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        grids.mensal.hidden = mode !== 'mensal';
+        grids.quinzenal.hidden = mode !== 'quinzenal';
+        grids[mode].classList.add('in'); // caso ainda não tenha sido revelado pelo scroll
+      });
     });
   })();
 

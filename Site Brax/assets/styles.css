@@ -430,6 +430,81 @@
     .service-group{ border-right:none; border-bottom:1px solid var(--line); }
     .service-group:last-child{ border-bottom:none; }
   }
+  .svc-sub-note{ color:var(--muted); font-size:13.5px; line-height:1.7; margin-bottom:18px; }
+  .svc-sub-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Space Mono', monospace; font-size:12px; letter-spacing:0.06em;
+    color:var(--gold-bright); transition:gap .2s ease;
+  }
+  .svc-sub-link:hover{ gap:12px; }
+
+  /* ASSINATURAS */
+  .sub-toggle{
+    display:flex; width:max-content; margin:0 auto 36px;
+    border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
+  }
+  .sub-tab{
+    background:none; border:0; cursor:pointer;
+    font-family:'Space Mono', monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--muted); padding:12px 28px; transition:background .2s ease, color .2s ease;
+  }
+  .sub-tab.active{ background:var(--gold); color:#181410; }
+  .sub-tab:not(.active):hover{ color:var(--ivory); }
+
+  .sub-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+  }
+  .sub-card{
+    background:var(--bg); padding:36px 30px 32px;
+    display:flex; flex-direction:column; position:relative;
+  }
+  .sub-card.featured{ background:var(--surface); }
+  .sub-badge{
+    position:absolute; top:0; left:50%; transform:translate(-50%,-50%);
+    font-family:'Space Mono', monospace; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; font-weight:700;
+    background:var(--gold); color:#181410; padding:5px 14px; border-radius:999px; white-space:nowrap;
+  }
+  .sub-name{
+    font-family:'Cormorant SC', serif; font-weight:600; font-size:22px; line-height:1.15;
+    color:var(--ivory); margin-bottom:16px; text-wrap:balance;
+  }
+  .sub-price{
+    font-family:'Cormorant SC', serif; font-weight:700; font-size:46px; line-height:1;
+    color:var(--gold-bright); margin-bottom:12px;
+  }
+  .sub-price .cur{ font-size:20px; }
+  .sub-price .per{ font-family:'Space Mono', monospace; font-size:13px; color:var(--muted); font-weight:400; }
+  .sub-count{ font-size:13.5px; color:var(--ivory); margin-bottom:0; }
+  .sub-count span{ color:var(--muted); }
+  .sub-save{
+    font-family:'Space Mono', monospace; font-size:12.5px; letter-spacing:0.02em;
+    color:var(--gold-bright); margin:12px 0 18px;
+  }
+  .sub-save span{ color:var(--gold); }
+  .sub-incl{ list-style:none; margin:0 0 24px; padding:0; display:flex; flex-direction:column; gap:9px; flex:1; }
+  .sub-incl li{ font-size:13.5px; color:var(--muted); display:flex; align-items:center; gap:10px; }
+  .sub-incl li::before{ content:""; width:5px; height:5px; border-radius:50%; background:var(--gold); flex-shrink:0; }
+  .sub-btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    font-family:'Space Mono', monospace; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700;
+    color:var(--gold-bright); border:1px solid var(--gold); padding:13px 18px; border-radius:var(--radius);
+    transition:background .2s ease, color .2s ease;
+  }
+  .sub-btn:hover{ background:var(--gold); color:var(--bg); }
+  .sub-card.featured .sub-btn{ background:var(--gold); color:#181410; }
+  .sub-card.featured .sub-btn:hover{ background:var(--gold-bright); }
+
+  .sub-rules{
+    max-width:640px; margin:32px auto 0; text-align:center;
+    font-family:'Space Mono', monospace; font-size:11.5px; color:var(--muted); line-height:1.85;
+  }
+  .sub-rules p{ margin:0; }
+
+  @media (max-width:900px){
+    .sub-grid{ grid-template-columns:1fr; }
+    .sub-badge{ left:20px; transform:translateY(-50%); }
+  }
 
   /* LOCATION */
   .loc-layout{ display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line); }
