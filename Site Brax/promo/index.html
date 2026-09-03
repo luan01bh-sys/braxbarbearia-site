@@ -354,11 +354,10 @@
     <a href="https://instagram.com/braxbarbearia" target="_blank" rel="noopener">Instagram</a>
     <a href="/privacidade.html">Privacidade</a>
   </div>
-  <div class="copy">© <span id="year"></span> BRAX BARBEARIA — R. CLÉLIA, 151, RIO BRANCO, BELO HORIZONTE - MG</div>
+  <div class="copy">© 2019–2026 BRAX BARBEARIA — R. CLÉLIA, 151, RIO BRANCO, BELO HORIZONTE - MG</div>
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
   document.querySelectorAll('a[data-wa]').forEach(function (a) {
     a.addEventListener('click', function () {
       if (typeof gtag === 'function') gtag('event', 'whatsapp_click', { link_text: 'promo_primeiro_corte', page: '/promo' });
