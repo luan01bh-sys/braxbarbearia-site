@@ -1,0 +1,186 @@
+<title>Brax Quadros A4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0b; --gold:#c9a24b; --gold-bright:#e6c675; --ivory:#f3efe4; --muted:#9c968a;
+    --line:rgba(201,162,75,0.30); --dash:rgba(243,239,228,0.14);
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html,body{ background:#151515; }
+  body{ display:block; padding:40px; }
+
+  /* A4 @ 300dpi = 2480 x 3508 px */
+  .sheet{
+    position:relative; width:2480px; min-width:2480px; height:3508px; min-height:3508px; flex-shrink:0;
+    overflow:hidden; margin-bottom:40px;
+    background:
+      radial-gradient(60% 32% at 50% 8%, rgba(201,162,75,0.10), transparent 60%),
+      var(--bg);
+    font-family:'Manrope', sans-serif; color:var(--ivory);
+  }
+  .pad{ position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; padding:150px 170px 130px; }
+
+  .crest{ width:520px; height:auto; display:block; }
+  h1{ font-family:'Cormorant SC', serif; font-weight:700; font-size:150px; line-height:1; letter-spacing:0.03em;
+      color:var(--ivory); margin-top:34px; text-align:center; }
+  .star{ display:flex; align-items:center; gap:32px; color:var(--gold); margin:34px 0 0; }
+  .star i{ display:block; width:150px; height:2px; background:linear-gradient(90deg, transparent, var(--gold)); }
+  .star i:last-child{ background:linear-gradient(90deg, var(--gold), transparent); }
+  .star svg{ width:34px; height:34px; }
+
+  .grouphead{
+    font-family:'Space Mono', monospace; font-weight:700; font-size:40px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--gold); margin-bottom:34px;
+  }
+  .grouphead small{ display:block; font-size:24px; letter-spacing:0.06em; color:var(--muted); font-weight:400; margin-top:8px; }
+
+  /* linha de preço */
+  .row{ display:flex; align-items:baseline; gap:20px; padding:24px 0; border-bottom:1px dashed var(--dash); }
+  .row:last-child{ border-bottom:0; }
+  .row .nm{ font-family:'Cormorant SC', serif; font-weight:600; font-size:46px; color:var(--ivory); white-space:nowrap; }
+  .row .dots{ flex:1; border-bottom:2px dotted rgba(243,239,228,0.18); transform:translateY(-10px); }
+  .row .pr{ font-family:'Space Mono', monospace; font-weight:700; font-size:42px; color:var(--gold-bright); white-space:nowrap; }
+
+  /* ---------- AVULSOS ---------- */
+  .cols{ display:grid; grid-template-columns:1fr 1fr; gap:120px; width:100%; margin-top:96px; }
+  .col .grouphead{ border-bottom:2px solid var(--line); padding-bottom:20px; }
+
+  .promo{
+    margin-top:70px; align-self:flex-end; width:52%;
+    border:2px solid var(--gold); border-radius:6px; padding:44px 40px; text-align:center;
+  }
+  .promo .k{ font-family:'Space Mono', monospace; font-size:34px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); }
+  .promo .v{ font-family:'Cormorant SC', serif; font-weight:700; font-size:110px; color:var(--gold-bright); margin:14px 0 10px; }
+  .promo .s{ font-family:'Space Mono', monospace; font-size:26px; letter-spacing:0.06em; color:var(--muted); }
+
+  /* ---------- ASSINATURAS ---------- */
+  .planos{ width:100%; margin-top:90px; display:flex; flex-direction:column; gap:76px; }
+  .grp{ }
+  .plan{ display:flex; align-items:flex-start; gap:24px; padding:30px 0; border-bottom:1px dashed var(--dash); }
+  .plan:last-child{ border-bottom:0; }
+  .plan .left{ flex:1; }
+  .plan .pn{ font-family:'Cormorant SC', serif; font-weight:600; font-size:52px; color:var(--ivory); }
+  .plan .pn b{ display:inline-block; margin-left:20px; font-family:'Space Mono', monospace; font-weight:700; font-size:22px;
+    letter-spacing:0.1em; text-transform:uppercase; color:#181410; background:var(--gold); border-radius:999px; padding:6px 18px;
+    vertical-align:middle; }
+  .plan .eco{ font-family:'Space Mono', monospace; font-size:28px; color:var(--gold-bright); margin-top:12px; letter-spacing:0.02em; }
+  .plan .right{ text-align:right; white-space:nowrap; }
+  .plan .price{ font-family:'Cormorant SC', serif; font-weight:700; font-size:70px; color:var(--gold-bright); line-height:1; }
+  .plan .price .cur{ font-size:34px; }
+  .plan .price .per{ font-family:'Space Mono', monospace; font-size:26px; color:var(--muted); }
+
+  .regras{
+    margin-top:74px; max-width:1600px; text-align:center;
+    font-family:'Space Mono', monospace; font-size:28px; line-height:1.9; color:var(--muted);
+  }
+
+  .spacer{ flex:1; }
+  .foot{ display:flex; flex-direction:column; align-items:center; gap:40px; }
+  .foot .star{ margin:0; }
+  .foot .addr{ font-family:'Space Mono', monospace; font-size:30px; letter-spacing:0.08em; color:var(--ivory); }
+  .foot .addr .b{ color:var(--gold); }
+</style>
+
+<!-- ==================== SERVIÇOS AVULSOS ==================== -->
+<div class="sheet" id="avulsos">
+  <div class="pad">
+    <img class="crest" src="assets/logo.png" alt="Brax Barbearia">
+    <h1>Serviços Avulsos</h1>
+    <div class="star"><i></i><svg viewBox="0 0 18 18" fill="none"><path d="M9 0L11 7L18 9L11 11L9 18L7 11L0 9L7 7L9 0Z" fill="currentColor"/></svg><i></i></div>
+
+    <div class="cols">
+      <div class="col">
+        <div class="grouphead">Avulsos</div>
+        <div class="row"><span class="nm">Corte</span><span class="dots"></span><span class="pr">R$ 40,00</span></div>
+        <div class="row"><span class="nm">Barba</span><span class="dots"></span><span class="pr">R$ 40,00</span></div>
+        <div class="row"><span class="nm">Corte, Barba e Sobrancelha</span><span class="dots"></span><span class="pr">R$ 85,00</span></div>
+        <div class="row"><span class="nm">Corte e Barba</span><span class="dots"></span><span class="pr">R$ 80,00</span></div>
+        <div class="row"><span class="nm">Corte e Sobrancelha</span><span class="dots"></span><span class="pr">R$ 50,00</span></div>
+        <div class="row"><span class="nm">Barba e Sobrancelha</span><span class="dots"></span><span class="pr">R$ 50,00</span></div>
+        <div class="row"><span class="nm">Sobrancelha</span><span class="dots"></span><span class="pr">R$ 15,00</span></div>
+        <div class="row"><span class="nm">Pezinho</span><span class="dots"></span><span class="pr">R$ 15,00</span></div>
+        <div class="row"><span class="nm">Depilação Nariz/Orelha</span><span class="dots"></span><span class="pr">R$ 30,00</span></div>
+      </div>
+      <div class="col">
+        <div class="grouphead">Estética &amp; Tratamentos</div>
+        <div class="row"><span class="nm">Selagem</span><span class="dots"></span><span class="pr">R$ 100,00</span></div>
+        <div class="row"><span class="nm">Botox</span><span class="dots"></span><span class="pr">R$ 70,00</span></div>
+        <div class="row"><span class="nm">Tintura</span><span class="dots"></span><span class="pr">R$ 35,00</span></div>
+        <div class="row"><span class="nm">Relaxamento</span><span class="dots"></span><span class="pr">R$ 35,00</span></div>
+        <div class="row"><span class="nm">Hidratação</span><span class="dots"></span><span class="pr">R$ 40,00</span></div>
+        <div class="row"><span class="nm">Escova</span><span class="dots"></span><span class="pr">R$ 20,00</span></div>
+        <div class="row"><span class="nm">Limpeza de Pele</span><span class="dots"></span><span class="pr">R$ 60,00</span></div>
+        <div class="row"><span class="nm">Luzes</span><span class="dots"></span><span class="pr">R$ 80,00</span></div>
+        <div class="row"><span class="nm">Platinado Total</span><span class="dots"></span><span class="pr">R$ 220,00</span></div>
+      </div>
+    </div>
+
+    <div class="promo">
+      <div class="k">Primeiro corte</div>
+      <div class="v">R$ 30,00</div>
+      <div class="s">Apenas para novos clientes</div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="foot">
+      <div class="star"><i></i><svg viewBox="0 0 18 18" fill="none"><path d="M9 0L11 7L18 9L11 11L9 18L7 11L0 9L7 7L9 0Z" fill="currentColor"/></svg><i></i></div>
+      <div class="addr"><span class="b">R. Clélia, 151</span> — Rio Branco, BH &nbsp;·&nbsp; (31) 99291-6354</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PLANOS DE ASSINATURA ==================== -->
+<div class="sheet" id="assinaturas">
+  <div class="pad">
+    <img class="crest" src="assets/logo.png" alt="Brax Barbearia">
+    <h1>Planos de Assinatura</h1>
+    <div class="star"><i></i><svg viewBox="0 0 18 18" fill="none"><path d="M9 0L11 7L18 9L11 11L9 18L7 11L0 9L7 7L9 0Z" fill="currentColor"/></svg><i></i></div>
+
+    <div class="planos">
+      <div class="grp">
+        <div class="grouphead">Mensal <small>4 atendimentos no mês</small></div>
+        <div class="plan">
+          <div class="left"><div class="pn">Corte</div><div class="eco">Economize R$ 32 por mês (20%)</div></div>
+          <div class="right"><div class="price"><span class="cur">R$</span> 128 <span class="per">/mês</span></div></div>
+        </div>
+        <div class="plan">
+          <div class="left"><div class="pn">Corte e Sobrancelha</div><div class="eco">Economize R$ 40 por mês (20%)</div></div>
+          <div class="right"><div class="price"><span class="cur">R$</span> 160 <span class="per">/mês</span></div></div>
+        </div>
+        <div class="plan">
+          <div class="left"><div class="pn">Corte, Barba e Sobrancelha <b>Mais escolhido</b></div><div class="eco">Economize R$ 84 por mês (25%)</div></div>
+          <div class="right"><div class="price"><span class="cur">R$</span> 256 <span class="per">/mês</span></div></div>
+        </div>
+      </div>
+
+      <div class="grp">
+        <div class="grouphead">Quinzenal <small>2 atendimentos no mês</small></div>
+        <div class="plan">
+          <div class="left"><div class="pn">Corte</div><div class="eco">Economize R$ 16 por mês (20%)</div></div>
+          <div class="right"><div class="price"><span class="cur">R$</span> 64 <span class="per">/mês</span></div></div>
+        </div>
+        <div class="plan">
+          <div class="left"><div class="pn">Corte e Sobrancelha</div><div class="eco">Economize R$ 20 por mês (20%)</div></div>
+          <div class="right"><div class="price"><span class="cur">R$</span> 80 <span class="per">/mês</span></div></div>
+        </div>
+        <div class="plan">
+          <div class="left"><div class="pn">Corte, Barba e Sobrancelha</div><div class="eco">Economize R$ 42 por mês (25%)</div></div>
+          <div class="right"><div class="price"><span class="cur">R$</span> 128 <span class="per">/mês</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="regras">
+      Sem fidelidade — cancele quando quiser, avisando antes da renovação.<br>
+      Os atendimentos valem dentro do mês e não acumulam. Agende pelo site ou WhatsApp.
+    </div>
+
+    <div class="spacer"></div>
+    <div class="foot">
+      <div class="star"><i></i><svg viewBox="0 0 18 18" fill="none"><path d="M9 0L11 7L18 9L11 11L9 18L7 11L0 9L7 7L9 0Z" fill="currentColor"/></svg><i></i></div>
+      <div class="addr"><span class="b">R. Clélia, 151</span> — Rio Branco, BH &nbsp;·&nbsp; (31) 99291-6354</div>
+    </div>
+  </div>
+</div>
