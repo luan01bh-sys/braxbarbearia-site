@@ -332,12 +332,14 @@
         <p>Escolha a frequência e o combo. Todo mês você paga menos do que sairia no avulso.</p>
       </div>
 
-      <div class="sub-toggle reveal" role="tablist" aria-label="Frequência da assinatura">
-        <button type="button" class="sub-tab active" data-mode="mensal" role="tab" aria-selected="true">Mensal</button>
-        <button type="button" class="sub-tab" data-mode="quinzenal" role="tab" aria-selected="false">Quinzenal</button>
+      <input class="sub-radio" type="radio" name="subfreq" id="freq-mensal" checked>
+      <input class="sub-radio" type="radio" name="subfreq" id="freq-quinzenal">
+      <div class="sub-toggle reveal">
+        <label for="freq-mensal" class="sub-tab">Mensal</label>
+        <label for="freq-quinzenal" class="sub-tab">Quinzenal</label>
       </div>
 
-      <div class="sub-grid reveal" id="subMensal">
+      <div class="sub-grid" id="subMensal">
         <article class="sub-card">
           <h3 class="sub-name">Corte</h3>
           <div class="sub-price"><span class="cur">R$</span> 128 <span class="per">/mês</span></div>
@@ -379,7 +381,7 @@
         </article>
       </div>
 
-      <div class="sub-grid reveal" id="subQuinzenal" hidden>
+      <div class="sub-grid" id="subQuinzenal">
         <article class="sub-card">
           <h3 class="sub-name">Corte</h3>
           <div class="sub-price"><span class="cur">R$</span> 64 <span class="per">/mês</span></div>
@@ -850,26 +852,6 @@
     });
     window.addEventListener('resize', function () {
       if (window.innerWidth > 760) setOpen(false);
-    });
-  })();
-
-  // assinaturas: toggle Mensal / Quinzenal
-  (function () {
-    const tabs = document.querySelectorAll('.sub-tab');
-    const grids = { mensal: document.getElementById('subMensal'), quinzenal: document.getElementById('subQuinzenal') };
-    if (!tabs.length || !grids.mensal || !grids.quinzenal) return;
-    tabs.forEach(function (t) {
-      t.addEventListener('click', function () {
-        const mode = t.dataset.mode;
-        tabs.forEach(function (x) {
-          const on = x === t;
-          x.classList.toggle('active', on);
-          x.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-        grids.mensal.hidden = mode !== 'mensal';
-        grids.quinzenal.hidden = mode !== 'quinzenal';
-        grids[mode].classList.add('in'); // caso ainda não tenha sido revelado pelo scroll
-      });
     });
   })();
 

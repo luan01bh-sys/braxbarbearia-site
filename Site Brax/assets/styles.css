@@ -439,23 +439,30 @@
   }
   .svc-sub-link:hover{ gap:12px; }
 
-  /* ASSINATURAS */
+  /* ASSINATURAS — toggle só com CSS (rádios ocultos), sem depender de JS */
+  .sub-radio{ position:absolute; width:1px; height:1px; opacity:0; margin:0; }
   .sub-toggle{
     display:flex; width:max-content; margin:0 auto 36px;
     border:1px solid var(--line); border-radius:var(--radius); overflow:hidden;
   }
   .sub-tab{
-    background:none; border:0; cursor:pointer;
+    display:inline-flex; align-items:center; cursor:pointer; user-select:none;
     font-family:'Space Mono', monospace; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
     color:var(--muted); padding:12px 28px; transition:background .2s ease, color .2s ease;
   }
-  .sub-tab.active{ background:var(--gold); color:#181410; }
-  .sub-tab:not(.active):hover{ color:var(--ivory); }
+  .sub-tab:hover{ color:var(--ivory); }
+  #freq-mensal:checked ~ .sub-toggle label[for="freq-mensal"],
+  #freq-quinzenal:checked ~ .sub-toggle label[for="freq-quinzenal"]{
+    background:var(--gold); color:#181410;
+  }
+  .sub-radio:focus-visible ~ .sub-toggle{ outline:2px solid var(--gold-bright); outline-offset:2px; }
 
   .sub-grid{
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
+    display:none; grid-template-columns:repeat(3, 1fr); gap:1px;
     background:var(--line); border:1px solid var(--line);
   }
+  #freq-mensal:checked ~ #subMensal,
+  #freq-quinzenal:checked ~ #subQuinzenal{ display:grid; }
   .sub-card{
     background:var(--bg); padding:36px 30px 32px;
     display:flex; flex-direction:column; position:relative;
