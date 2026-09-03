@@ -16,14 +16,14 @@
   .frame{
     position:relative; width:1080px; height:1920px; overflow:hidden;
     background:
-      radial-gradient(75% 45% at 50% 20%, rgba(201,162,75,0.16), transparent 60%),
-      radial-gradient(90% 50% at 50% 100%, rgba(201,162,75,0.10), transparent 60%),
+      radial-gradient(72% 42% at 50% 30%, rgba(201,162,75,0.17), transparent 62%),
+      radial-gradient(90% 45% at 50% 100%, rgba(201,162,75,0.10), transparent 60%),
       var(--bg);
     font-family:'Manrope', -apple-system, sans-serif;
     color:var(--ivory);
-    display:flex; flex-direction:column; align-items:center;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
     text-align:center;
-    padding:150px 90px 130px;
+    padding:120px 90px;
   }
 
   /* engraved border + corner ticks */
@@ -37,29 +37,29 @@
   .mark{ font-family:'Cormorant SC', serif; font-weight:700; font-size:60px; letter-spacing:0.22em; text-indent:0.22em; color:var(--ivory); }
   .mark-sub{ margin-top:8px; font-family:'Space Mono', monospace; font-size:17px; letter-spacing:0.5em; text-indent:0.5em; color:var(--gold); }
 
-  .star{ margin:44px 0 40px; display:flex; align-items:center; gap:20px; color:var(--gold); }
+  .star{ margin:52px 0 46px; display:flex; align-items:center; gap:20px; color:var(--gold); }
   .star i{ display:block; width:80px; height:1px; background:linear-gradient(90deg, transparent, var(--gold)); }
   .star i:last-child{ background:linear-gradient(90deg, var(--gold), transparent); }
   .star svg{ width:20px; height:20px; }
 
   .eyebrow{ font-family:'Space Mono', monospace; font-size:20px; letter-spacing:0.34em; text-indent:0.34em; text-transform:uppercase; color:var(--gold); margin-bottom:24px; }
 
-  h1{ font-family:'Cormorant SC', serif; font-weight:700; font-size:104px; line-height:1.0; color:var(--ivory); text-wrap:balance; margin-bottom:34px; }
+  h1{ font-family:'Cormorant SC', serif; font-weight:700; font-size:110px; line-height:1.0; color:var(--ivory); text-wrap:balance; margin-bottom:44px; }
 
   .url{
     display:inline-block;
     font-family:'Space Mono', monospace; font-weight:700;
-    font-size:34px; letter-spacing:0.02em;
+    font-size:36px; letter-spacing:0.02em;
     color:var(--gold-bright);
     border:1px solid var(--gold);
     border-radius:3px;
-    padding:20px 34px;
-    margin-bottom:52px;
+    padding:22px 38px;
+    margin-bottom:66px;
   }
 
-  .list{ display:flex; flex-direction:column; gap:22px; margin-bottom:56px; }
-  .list .row{ display:flex; align-items:center; gap:18px; font-size:30px; color:#ddd7c9; }
-  .list .row svg{ flex-shrink:0; width:26px; height:26px; color:var(--gold); }
+  .list{ display:flex; flex-direction:column; gap:30px; margin-bottom:70px; }
+  .list .row{ display:flex; align-items:center; gap:20px; font-size:31px; color:#ddd7c9; }
+  .list .row svg{ flex-shrink:0; width:28px; height:28px; color:var(--gold); }
 
   .cta{
     display:inline-flex; align-items:center; gap:16px;
@@ -71,11 +71,12 @@
   }
   .cta svg{ width:28px; height:28px; }
 
-  .spacer{ flex:1; }
-
-  .foot{ font-family:'Space Mono', monospace; font-size:22px; letter-spacing:0.06em; color:var(--ivory); }
+  .foot{
+    position:absolute; left:0; right:0; bottom:104px; z-index:3;
+    font-family:'Space Mono', monospace; font-size:23px; letter-spacing:0.06em; color:var(--ivory);
+  }
   .foot .b{ color:var(--gold); }
-  .foot .ig{ display:block; margin-top:10px; color:var(--muted); font-size:20px; }
+  .foot .ig{ display:block; margin-top:12px; color:var(--muted); font-size:21px; }
 </style>
 
 <div class="frame" id="frame">
@@ -107,8 +108,6 @@
       Acesse agora
     </div>
   </div>
-
-  <div class="spacer"></div>
 
   <div class="foot">
     <span class="b">Rio Branco</span> · Belo Horizonte
