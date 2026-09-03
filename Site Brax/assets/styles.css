@@ -514,38 +514,41 @@
     .sub-badge{ left:20px; transform:translateY(-50%); }
   }
 
-  /* NOSSO TIME */
+  /* NOSSO TIME — recortes sem moldura, "flutuando" sobre o fundo escuro */
   .team-grid{
-    display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 340px));
-    gap:20px; justify-content:center;
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 320px));
+    gap:44px 36px; justify-content:center;
   }
-  .team-card{
-    border:1px solid var(--line); background:var(--surface);
-    display:flex; flex-direction:column; overflow:hidden;
-  }
-  /* fotos são recortes PNG (fundo transparente) sobre o card escuro */
+  .team-card{ display:flex; flex-direction:column; align-items:center; text-align:center; }
   .team-photo{
-    position:relative; aspect-ratio:3 / 4; overflow:hidden;
-    background:
-      radial-gradient(135% 95% at 50% 22%, rgba(201,162,75,0.12), rgba(243,239,228,0.04) 34%, transparent 64%),
-      linear-gradient(180deg, var(--surface-2), #17161c);
+    position:relative; width:100%; aspect-ratio:4 / 5;
+    display:flex; align-items:flex-end; justify-content:center;
+  }
+  /* halo dourado atrás pra destacar a silhueta (camiseta preta em fundo escuro) */
+  .team-photo::before{
+    content:""; position:absolute; left:50%; top:6%; width:82%; height:88%;
+    transform:translateX(-50%);
+    background:radial-gradient(ellipse at 50% 42%, rgba(201,162,75,0.20), rgba(201,162,75,0.06) 46%, transparent 72%);
+  }
+  /* sombra elíptica no chão, ancorando a figura */
+  .team-photo::after{
+    content:""; position:absolute; left:50%; bottom:2%; width:58%; height:26px;
+    transform:translateX(-50%);
+    background:radial-gradient(ellipse at center, rgba(0,0,0,0.55), transparent 70%);
+    filter:blur(3px);
   }
   .team-photo img{
-    width:100%; height:100%; object-fit:cover; object-position:50% 6%;
-    filter:contrast(1.04) drop-shadow(0 14px 26px rgba(0,0,0,0.55));
-    transition:transform .6s ease, filter .5s ease;
+    position:relative; max-width:100%; max-height:100%; width:auto; height:100%;
+    object-fit:contain;
+    filter:contrast(1.04) drop-shadow(0 18px 26px rgba(0,0,0,0.5));
+    transition:transform .55s ease;
   }
-  /* funde a base do recorte no painel de texto */
-  .team-photo::after{
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background:linear-gradient(to top, var(--surface) 1%, rgba(23,22,28,0.5) 16%, transparent 42%);
-  }
-  .team-card:hover .team-photo img{ transform:scale(1.035); filter:contrast(1.05) drop-shadow(0 16px 30px rgba(0,0,0,0.6)); }
-  .team-info{ padding:22px 22px 26px; display:flex; flex-direction:column; gap:9px; }
+  .team-card:hover .team-photo img{ transform:translateY(-4px) scale(1.02); }
+  .team-info{ display:flex; flex-direction:column; align-items:center; gap:9px; padding:14px 6px 0; max-width:340px; }
   .team-role{ font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
   .team-info h3{ font-family:'Cormorant SC', serif; font-weight:600; font-size:24px; line-height:1.1; color:var(--ivory); }
   .team-info p{ color:var(--muted); font-size:13px; line-height:1.7; }
-  .team-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:5px; }
+  .team-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:5px; justify-content:center; }
   .team-tags span{
     font-family:'Space Mono', monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
     color:var(--gold-bright); border:1px solid var(--line); border-radius:999px; padding:5px 11px;
