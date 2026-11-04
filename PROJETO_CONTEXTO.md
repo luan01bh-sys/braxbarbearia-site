@@ -11,7 +11,7 @@ O site foi construído em outra conversa (Claude.ai) e migrado para este reposit
 - **Instagram:** @braxbarbearia
 - **Horário:** Seg-Sáb 08:00-20:00, Domingo 08:00-13:00
 - **Domínio:** braxbarbearia.com.br (registrado no registro.br, DNS aponta pro Netlify)
-- **Google Meu Negócio:** 5,0⭐ com 58 avaliações (nome antigo no Google: "Barber Shop World")
+- **Google Meu Negócio:** 5,0⭐ com 99 avaliações (nome antigo no Google: "Barber Shop World")
 
 ## Stack técnica
 - Site estático simples: HTML + CSS + JS puro (sem framework, sem build step)
@@ -47,7 +47,7 @@ assets/
 4. **Serviços** — tabela de preços em 3 categorias (Avulsos, Estética & Tratamentos, Assinaturas)
 5. **Galeria** — 6 fotos reais de cortes/ambiente
 6. **Produtos** — 13 produtos com foto (fundo removido), descrição, preço e botão "Reservar" (abre WhatsApp com mensagem pré-preenchida citando o produto). Categorias: Styling & Finalização, Crescimento Capilar, Corporal. Produtos da marca Kannep foram removidos a pedido do dono (não trabalha mais com a marca)
-7. **Avaliações** — 4 depoimentos reais copiados do Google, com nota 5,0⭐/58 avaliações
+7. **Avaliações** — 4 depoimentos reais copiados do Google, com nota 5,0⭐/99 avaliações
 8. **Localização** — mapa embutido do Google Maps + endereço + botão "Como chegar"
 9. **Horários** — com destaque automático (JS) do dia atual e indicador "aberto/fechado agora"
 10. **FAQ** — 6 perguntas em formato acordeão (`<details>/<summary>`)
