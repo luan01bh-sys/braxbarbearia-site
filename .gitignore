@@ -12,3 +12,7 @@ $RECYCLE.BIN/
 
 # Netlify (build local, se algum dia usar)
 .netlify/
+
+# Robô do painel dos tablets
+painel-robo/saida/
+__pycache__/

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /painel/
 
 Sitemap: https://braxbarbearia.com.br/sitemap.xml
